@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Survey Form</title>
+        <style>
+            body {
+                margin: 20px;
+                width: 100%;
+                height: 100%;
+                color: #0e0e0e;
+                font-family: Tahoma;
+                padding: 2em 0;
+                background-color: blue;
+                background-size: cover;
+                background-position: fixed;
+                font-size: 18px;
+            }
+
+            .survey {
+                margin: 20px;
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            .submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        </style>
+    </head>
+    <body>
+        <div class="survey">
+            <form action="index.php" method="post">
+                <label for="name">Name:</label> <br />
+                <input type="text" name="name" /> <br />
+
+                <label for="email">Email:</label> <br />
+                <input type="text" name="email" /> <br />
+
+                <label for="address">Address:</label> <br />
+                <textarea name="address"></textarea> <br />
+
+                <label for="city">City:</label> <br />
+                <select name="city">
+                    <option>London</option>
+                    <option>Manchester</option>
+                    <option>Birmingham</option>
+                    <option>Glasgow</option>
+                    <option>Liverpool</option>
+                    <option>Oxford/Cambridge</option>
+                </select>
+                <br />
+
+                <label for="gender">Gender:</label> <br />
+                <input type="radio" name="gender" value="male" /> Male <br />
+                <input type="radio" name="gender" value="female" /> Female
+                <br />
+
+                <label for="upload">Upload File:</label> <br />
+                <input type="file" name="upload" /> <br />
+
+                <label for="comments">Any comments or suggestions?</label>
+                <br />
+                <textarea
+                    id="comments"
+                    name="comments"
+                    placeholder="Enter your comment here..."
+                ></textarea>
+                <br />
+
+                <label for="student"
+                    >Are you interested in being a student?</label
+                >
+                <br />
+                <input type="radio" name="student" value="yes" /> Yes <br />
+                <input type="radio" name="student" value="maybe" /> Maybe <br />
+                <input type="radio" name="student" value="not_sure" /> Not Sure
+                <br />
+
+                <label for="topics">What topics are you interested in?</label>
+                <br />
+                <select name="topics" multiple>
+                    <option>Web Design</option>
+                    <option>Python</option>
+                    <option>Testing</option>
+                    <option>Data Science</option>
+                    <option>DevOp</option>
+                </select>
+                <br />
+
+                <label for="improvements"
+                    >What would you like to see improved?</label
+                >
+                <br />
+                <input type="checkbox" name="improvements[]" value="improve1" />
+                Improve 1 <br />
+                <input type="checkbox" name="improvements[]" value="improve2" />
+                Improve 2 <br />
+                <input type="checkbox" name="improvements[]" value="improve3" />
+                Improve 3 <br />
+                <input type="checkbox" name="improvements[]" value="improve4" />
+                Improve 4 <br />
+
+                <div class="form-group">
+                    <p>Any additional comments or suggestions?</p>
+                    <textarea
+                        id="comments"
+                        class="input-textarea"
+                        name="comment"
+                        placeholder="Enter your comment here..."
+                    ></textarea>
+                </div>
+                <button
+                    type="submit"
+                    id="submit"
+                    value="submit"
+                    class="submit-button"
+                >
+                    Submit
+                </button>
+            </form>
+        </div>
+    </body>
+</html>

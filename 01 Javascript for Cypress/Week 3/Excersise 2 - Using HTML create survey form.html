@@ -1,0 +1,176 @@
+<!-- Excercise 2: Using HTML, create a survey form
+###################################################
+- This exercise requires you to create an HTML survey from for LSET 
+- Users ask several questions in this form. 
+- We will use HTML to desing the basic layout of the form and CSS 
+  to give it a beautiful appearance, such as text decorasion, text color, 
+  backround colour, text alingnment, etc. 
+- Using the <form> element.
+- Provide the user different options inside the form element, such as 
+  name, email, age, etc. 
+- Additionally use radio button (to select on of the choices provided),
+- a check bottom (to select zero or more options from choices provided), and
+- a submit button (to submit the form data to a form handler).  -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Survey Form</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>
+                <center><font color="FF9900">Survey Form</font></center>
+            </h1>
+            <form action="submit.php" method="post">
+                <div class="form-group">
+                    <div class="name-group">
+                        <div>
+                            <label for="first-name">First Name:</label>
+                            <input
+                                type="text"
+                                id="first-name"
+                                name="first-name"
+                                class="rounded-input"
+                                required
+                                placeholder="First Name"
+                            />
+                        </div>
+                        <div>
+                            <label for="last-name">Last Name:</label>
+                            <input
+                                type="text"
+                                id="last-name"
+                                name="last-name"
+                                class="rounded-input"
+                                required
+                                placeholder="Last Name"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="rounded-input"
+                            placeholder="Email"
+                        />
+                    </div>
+                    <div>
+                        <label for="address">Address:</label>
+                        <input
+                            type="address"
+                            id="address"
+                            name="address"
+                            class="rounded-input"
+                            placeholder="Address"
+                        />
+                    </div>
+                    <div>
+                        <label for="city">City:</label><br />
+                        <select name="city">
+                            <option>London</option>
+                            <option>Birmingham</option>
+                            <option>Leeds</option>
+                            <option>Glasgow</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="gender">Gender:</label><br />
+                        <input type="radio" name="gender" value="male" />
+                        Male<br />
+                        <input type="radio" name="gender" value="female" />
+                        Female
+                    </div>
+                    <div>
+                        <label for="age">Your age:</label><br />
+                        <select name="age">
+                            <option>6 to 12</option>
+                            <option>13 to 19</option>
+                            <option>20 to 29</option>
+                            <option>30 to 39</option>
+                            <option>40 to 49</option>
+                            <option>50 to 59</option>
+                            <option>60 plus</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="experience"
+                        >On skale 1 to 5, how you rate your experience?</label
+                    >
+                    <div class="rating">
+                        <input
+                            type="radio"
+                            id="star5"
+                            name="rating"
+                            value="5"
+                        />
+                        <label for="star5"></label>
+                        <input
+                            type="radio"
+                            id="star4"
+                            name="rating"
+                            value="4"
+                        />
+                        <label for="star4"></label>
+                        <input
+                            type="radio"
+                            id="star3"
+                            name="rating"
+                            value="3"
+                        />
+                        <label for="star3"></label>
+                        <input
+                            type="radio"
+                            id="star2"
+                            name="rating"
+                            value="2"
+                        />
+                        <label for="star2"></label>
+                        <input
+                            type="radio"
+                            id="star1"
+                            name="rating"
+                            value="1"
+                        />
+                        <label for="star1"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="feedback"
+                        >Any other comments, suggestions or documents?</label
+                    >
+                    <textarea
+                        id="feedback"
+                        name="feedback"
+                        class="large-textarea"
+                        rows="8"
+                    ></textarea>
+                    <div class="button-wrap">
+                        <label for="upload">Upload File:</label><br />
+                        <input type="file" name="upload" /><br />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="accept-terms" class="inline-label"
+                        >Accept Terms &amp; Conditions:</label
+                    >
+                    <input
+                        type="checkbox"
+                        id="accept-terms"
+                        name="accept"
+                        value="accepted"
+                        class="inline-checkbox"
+                    />
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

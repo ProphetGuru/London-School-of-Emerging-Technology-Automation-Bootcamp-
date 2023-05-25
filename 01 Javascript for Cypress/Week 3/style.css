@@ -1,0 +1,133 @@
+body {
+    background-image: url(https://www.zdnet.com/a/img/resize/aebf884a3c5117c14da992e00315bdb67958a076/2017/03/03/f5af4d78-89c6-4741-a7c9-699a1aef4010/05w-moocs-istockphoto-rawpixel-1.jpg?auto=webp&fit=crop&height=1200&width=1200);
+    background-size: 150%;
+    font-family: Arial, sans-serif;
+    color: #1768be;
+    display: flex;
+    justify-content: center;
+    line-height: 2;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 50px;
+    width: 40%;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 419px;
+}
+
+.name-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.name-group label {
+    font-weight: bold;
+}
+
+.name-group input {
+    width: 200px;
+}
+
+.rounded-input {
+    background-color: #edf2f5;
+    border-radius: 5px;
+    border: 0.1px solid #edf2f5;
+    height: 20px;
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.rating {
+    display: inline-flex;
+    font-size: 0;
+    align-items: center;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    display: inline-block;
+    font-size: 40px;
+    color: #ccc;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: color 0.3s;
+}
+
+.rating label:before {
+    content: "\2605";
+    display: inline-block;
+}
+
+.rating input[type="radio"]:checked ~ label {
+    color: gold;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold;
+}
+
+.inline-label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inline-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.large-textarea {
+    height: 120px;
+    resize: vertical;
+    width: 400px;
+}
+
+input[type="file"]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #46b000;
+    padding: 6px 20px;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: #0d45a5;
+}
+
+.submit-button {
+    background-color: #ffa200;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    width: 419px;
+}
