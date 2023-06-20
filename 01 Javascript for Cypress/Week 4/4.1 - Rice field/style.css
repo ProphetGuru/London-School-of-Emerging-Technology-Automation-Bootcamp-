@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 100;
+}
+
+.scroll {
+    background-image: url("https://previews.123rf.com/images/paktaotik2/paktaotik21909/paktaotik2190900026/131128001-asian-children-in-rice-fields-with-countryside-background.jpg");
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    height: 100vh;
+    overflow-y: scroll;
+    margin-top: 100px;
+}
+
+.scroll-content {
+    margin-top: 200px;
+    padding: 20px;
+    color: #000000;
+    font-size: 18px;
+    line-height: 1.5;
+}
