@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Area of a triangle</title>
+  <style>
+    
+    body {
+      background-color: #f3ebdd;
+                                   }
+
+    h2 {
+    text-decoration: underline;
+    color: rgb(49, 105, 3);
+}
+
+    #pic3 {
+      position: fixed;
+      top: 65px;
+      right: 10px;
+      width: 60%;
+  }
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 15px dashed transparent;
+      border-right: 16px dashed transparent;
+      border-bottom: 17px dashed darkgreen;
+    }
+    .footnote {
+      font-size: 12px;
+      color: gray;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <img id="pic3" src="pic3.jpg" alt="Pic 3">
+
+  <center><h2>Area of a triangle</h2></center>
+  <p>Side 1 = 15cm</p>
+  <p>Side 2 = 16cm</p>
+  <p>Side 3 = 17cm</p>
+
+<!--
+  ######################################################
+          School formula for triangle Area (A)
+  
+   Square root of triangles semiperimeter minus each side
+  
+   If Perimeter (P) = a + b + c and Semiperimeter is half
+  
+   that is Semiperimeter (S) = (a + b + c) / 2
+  
+   then (A) = √ s * (s - a) * (s - b) * (s - c)
+  ######################################################
+  -->
+
+  <div class="triangle" style="border-left: 15px dashed transparent; border-right: 16px dashed transparent; border-bottom: 17px dashed darkgreen;"></div>
+  <div id="triangle-area-placeholder"></div>
+
+  <p class="footnote">
+    <sup>[1]</sup> area of a triangle with sidelengts a, b, and c: <br>
+    <sup></sup> and semi-perimeter of s is <br>
+    <sup></sup> s = (a + b + c) / 2 <br>
+    <sup></sup> A = √(s * (s - a) * (s - b) * (s - c)) <br>
+  </p>
+
+  <script>
+    function calculateTriangleArea(side1, side2, side3) {
+      // Calculation of (S) semi-perimeter
+      var semiperimeter = (side1 + side2 + side3) / 2;
+
+      // Calculation of (A) Area with school formula
+      var area = Math.sqrt(
+        semiperimeter *
+        (semiperimeter - side1) *
+        (semiperimeter - side2) *
+        (semiperimeter - side3)
+      );
+
+      return area;
+    }
+
+    // Sides of triangle
+    var side1 = 15;
+    var side2 = 16;
+    var side3 = 17;
+
+    // Calculation of area
+    var triangleArea = calculateTriangleArea(side1, side2, side3);
+
+    // Display calculation // display not working
+    document.getElementById("triangle-area-placeholder").innerHTML = "The area of the triangle is: " + triangleArea.toFixed(2);
+  </script>
+</body>
+</html>

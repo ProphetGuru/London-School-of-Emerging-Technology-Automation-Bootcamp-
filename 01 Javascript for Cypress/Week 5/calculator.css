@@ -1,0 +1,47 @@
+body {
+    background-image: url("pic2.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    color: rgb(255, 89, 0);
+    text-decoration: underline;
+}
+
+.calculator {
+    width: 400px;
+    background-color: rgba(67, 71, 68, 0.3);
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    height: 200px;
+    margin-top: -7cm; 
+}
+
+input[type="text"] {
+    display: block; 
+    margin: 10px auto;
+}
+
+button {
+    width: 80px;
+    height: 20px;
+    margin: 4px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 28px; 
+    font-weight: bold;
+    color: rgb(255, 255, 0);
+}

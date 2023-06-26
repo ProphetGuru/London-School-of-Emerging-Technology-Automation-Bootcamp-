@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function add() {
+          var firstNumber = document.getElementById("firstnumber").value;
+          var secondNumber = document.getElementById("secondnumber").value;
+          var result = parseFloat(firstNumber) + parseFloat(secondNumber);
+          displayResult(result);
+        }
+      
+        function subtract() {
+          var firstNumber = document.getElementById("firstnumber").value;
+          var secondNumber = document.getElementById("secondnumber").value;
+          var result = parseFloat(firstNumber) - parseFloat(secondNumber);
+          displayResult(result);
+        }
+      
+        function multiply() {
+          var firstNumber = document.getElementById("firstnumber").value;
+          var secondNumber = document.getElementById("secondnumber").value;
+          var result = parseFloat(firstNumber) * parseFloat(secondNumber);
+          displayResult(result);
+        }
+      
+        function divide() {
+          var firstNumber = document.getElementById("firstnumber").value;
+          var secondNumber = document.getElementById("secondnumber").value;
+          var result = parseFloat(firstNumber) / parseFloat(secondNumber);
+          displayResult(result);
+        }
+      
+        function displayResult(result) {
+          alert(result);
+          document.getElementById("result").innerHTML = result;
+        }
+      </script>
+</head>
+<body>
+    <div>
+        <input id="firstnumber" type="text">
+    </div>
+    <div>
+        <input id="secondnumber" type="text">
+    </div>
+    
+    <button onclick="add()">Add</button>
+    <button onclick="substract()">Substract</button>
+    <button onclick="multiply()">Mutlipy</button>
+    <button onclick="Divide()">Devide</button>
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        body {
+          background-image: url("pic.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          margin: 0;
+        }
+
+        .calculator {
+          width: 400px;
+          background-color: rgb(255, 197, 153);
+          padding: 5px;
+          border-radius: 20px;
+          text-align: center;
+          margin-top: 2.5cm;
+        }
+
+        input[type="text"] {
+          display: block; 
+          margin: 10px auto;
+          /* to prevent input going into 1 line */
+        }
+
+        button {
+          width: 80px;
+          height: 20px;
+          margin: 4px;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 14px;
+        }
+
+        #result {
+          margin-top: 20px;
+          font-size: 28px;
+          font-weight: bold;
+          color: green;
+        }
+    </style>
+    <script>
+        function add() {
+          var firstNumber = document.getElementById("firstnumber").value;
+          var secondNumber = document.getElementById("secondnumber").value;
+          var result = parseFloat(firstNumber) + parseFloat(secondNumber);
+          displayResult(result);
+        }
+      
+        function subtract() {
+          var firstNumber = document.getElementById("firstnumber").value;
+          var secondNumber = document.getElementById("secondnumber").value;
+          var result = parseFloat(firstNumber) - parseFloat(secondNumber);
+          displayResult(result);
+        }
+      
+        function multiply() {
+          var firstNumber = document.getElementById("firstnumber").value;
+          var secondNumber = document.getElementById("secondnumber").value;
+          var result = parseFloat(firstNumber) * parseFloat(secondNumber);
+          displayResult(result);
+        }
+      
+        function divide() {
+          var firstNumber = document.getElementById("firstnumber").value;
+          var secondNumber = document.getElementById("secondnumber").value;
+          var result = parseFloat(firstNumber) / parseFloat(secondNumber);
+          displayResult(result);
+        }
+      
+        function displayResult(result) {
+          var resultElement = document.getElementById("result");
+          resultElement.innerHTML = "And the result is: " + result;
+          resultElement.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Javascrip Online Calulator</h2>
+        <input id="firstnumber" type="text" style="margin-top: 31px;">
+        <input id="secondnumber" type="text" style="margin-top: 13px;">
+        <button onclick="add()" style="background-color: rgb(18, 221, 18);">Add</button>
+        <button onclick="subtract()" style="background-color: rgb(246, 246, 101);">Subtract</button>
+        <button onclick="multiply()" style="background-color: rgb(147, 232, 243);">Multiply</button>
+        <button onclick="divide()" style="background-color: rgb(253, 103, 151);">Divide</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
